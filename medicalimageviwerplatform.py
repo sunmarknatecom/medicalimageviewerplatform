@@ -34,9 +34,4 @@ class MedicalImageViewerPlatform(QMainWindow):
         help_menu.addAction(self.release_action)
         help_menu.addAction(self.license_action)
 
-#      Main      ==============================================================
-if __name__=="__main__":
-    app = QApplication(sys.argv)
-    window = MedicalImageViewerPlatform()
-    window.show()
-    app.exec_()
+text = "test"
