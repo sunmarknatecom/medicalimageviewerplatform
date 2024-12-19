@@ -1,0 +1,3 @@
+import pyqt
+
+text = "test"
