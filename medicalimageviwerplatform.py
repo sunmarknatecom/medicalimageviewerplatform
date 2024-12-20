@@ -12,7 +12,7 @@ class MedicalImageViewerPlatform(QMainWindow):
         super().__init__()
         self.setWindowTitle("Medical Image Viewer Platform v1.0.0")
         self.setGeometry(300, 300, 400, 400)
-        # Create Menubar
+        # Create Menubar ======================================================
         self.menubar = self.menuBar()
         self.menubar.setNativeMenuBar(False)
         # MenuActions
@@ -35,9 +35,9 @@ class MedicalImageViewerPlatform(QMainWindow):
         file_menu.addAction(self.quit_action)
 
         imageprocessing_menu = self.menubar.addMenu("영상처리")
-        self.contrast_action.addAction(self.contrast_action)
-        self.brightness_action.addAction(self.brightness_action)
-        self.gamma_action.addAction(self.gamma_action)
+        imageprocessing_menu.addAction(self.contrast_action)
+        imageprocessing_menu.addAction(self.brightness_action)
+        imageprocessing_menu.addAction(self.gamma_action)
         imageprocessing_menu.addSeparator()
         
         help_menu = self.menubar.addMenu("도움말")
@@ -45,6 +45,8 @@ class MedicalImageViewerPlatform(QMainWindow):
         help_menu.addAction(self.doc_action)
         help_menu.addAction(self.release_action)
         help_menu.addAction(self.license_action)
+        # path input labels ===================================================
+        # image view labels ===================================================
 
 #      Main      ==============================================================
 if __name__=="__main__":
