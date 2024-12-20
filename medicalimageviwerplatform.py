@@ -19,6 +19,11 @@ class MedicalImageViewerPlatform(QMainWindow):
         #    FileMenuActions
         self.quit_action = QAction("Quit")
         self.quit_action.triggered.connect(self.close)
+        #    ImageProcessingMenuActions
+        self.contrast_action = QAction("Contrast")
+        self.brightness_action = QAction("Brightness")
+        self.gamma_action = QAction("Gamma")
+        #    ViewMenuActions
         #    HelpMenuActions
         self.doc_action = QAction("Documentation")
         self.release_action = QAction("Release Notes")
@@ -28,6 +33,13 @@ class MedicalImageViewerPlatform(QMainWindow):
         file_menu = self.menubar.addMenu("파일")
         file_menu.addSeparator()
         file_menu.addAction(self.quit_action)
+
+        imageprocessing_menu = self.menubar.addMenu("영상처리")
+        self.contrast_action.addAction(self.contrast_action)
+        self.brightness_action.addAction(self.brightness_action)
+        self.gamma_action.addAction(self.gamma_action)
+        imageprocessing_menu.addSeparator()
+        
         help_menu = self.menubar.addMenu("도움말")
         help_menu.addSeparator()
         help_menu.addAction(self.doc_action)
